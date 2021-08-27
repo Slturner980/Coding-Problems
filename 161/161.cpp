@@ -20,11 +20,10 @@ int main()
     int j;
 
     ifstream file;
-    file.open ("in1");
+    file.open ("in1.txt");
 
-    file >> j;
+    if(file.is_open()){
 
-    while (j=! 0){
         for ( i = 0; i < 100; i++)
         {
             file >> BaseArray[i];
@@ -32,10 +31,11 @@ int main()
         
     }
 
-    for (i = 0; i < 100; i++)
-    {
-       cout << BaseArray[i] << endl;
-    }
+        for ( i = 0; i < 100; i++)
+        {
+            cout << BaseArray[i] << endl;
+        }
+    
 
     return 0;
 }
